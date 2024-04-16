@@ -1,7 +1,10 @@
 {
-    "How can I enroll in the insurance policy?": "You can enroll in the insurance policy by providing your details through the app. Would you like guidance on the enrollment process?",
-    "When will I receive an SMS notification after submitting a claim?": "You will receive an SMS notification after your claim is approved by the authorities. Please ensure that your contact details are up-to-date in your profile.",
+    "ମୁଁ ବୀମା ପଲିସିରେ କିପରି ନାମ ଲେଖାଇବି?": "ଆପ୍ ମାଧ୍ୟମରେ ଆପଣଙ୍କର ବିବରଣୀ ପ୍ରଦାନ କରି ଆପଣ ବୀମା ପଲିସିରେ ନାମ ଲେଖାଇ ପାରିବେ | ଆପଣ ନାମଲେଖା ପ୍ରକ୍ରିୟା ଉପରେ ମାର୍ଗଦର୍ଶନ ଚାହୁଁଛନ୍ତି କି?",
+    "When will I receive an SMS notification after submitting a claim?": "xxxx.",
     "Can I receive notifications and information in my local language?": "Yes, the app supports local languages to ensure better accessibility for farmers like you. You can choose your preferred language in the settings.",
     "How can I track the status of my insurance claim?": "You can track the status of your insurance claim using your Aadhar number through the app's 'Track Claim' feature. Would you like assistance with tracking your claim?",
-    "Are there video tutorials available to help me understand the insurance policy better?": "Yes, the app provides video tutorials to create awareness about the insurance policy and its benefits. You can access them in the 'Tutorials' section."
+    "Are there video tutorials available to help me understand the insurance policy better?": "Yes, the app provides video tutorials to create awareness about the insurance policy and its benefits. You can access them in the 'Tutorials' section.",
+    "How is claim verification done using meteorological department data?": "Claims are verified using meteorological department data to assess the impact of weather conditions on crop damage. This helps ensure accurate and timely processing of claims. Would you like more details on the verification process?",
+    "Is there a helpline available for farmers to seek assistance regarding insurance claims?": "Yes, there is a helpline available for farmers to seek assistance regarding insurance claims. You can find the helpline number in the 'Help & Support' section of the app."
 }
+
