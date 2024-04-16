@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background-color: #798893; /* Light gray background */
+        }
+        .chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            background-color: #edf2f7; /* Light blue background for chat container */
+        }
+        .chat-message {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .chat-message-user {
+            background-color: #d6fcbf; /* Light green background */
+            color: #2d3748;
+            padding: 8px 12px;
+            border-radius: 8px;
+            max-width: 70%;
+        }
+        .chat-message-bot {
+            background-color: #e2e8f0; /* Gray background */
+            color: #2d3748;
+            padding: 8px 12px;
+            border-radius: 8px;
+            max-width: 70%;
+            margin-left: auto;
+        }
+        .chat-input {
+            width: calc(100% - 100px);
+            padding: 8px;
+            border: 1px solid #cbd5e0;
+            border-radius: 8px;
+            margin-right: 12px;
+        }
+        .chat-submit {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background-color: #2b6cb0; /* Dark blue-green */
+            color: #fff;
+            cursor: pointer;
+        }
+        .chat-image {
+            display: block;
+            margin: 20px auto;
+            max-width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="max-w-screen-lg mx-auto px-4">
+        <h1 class="text-3xl font-bold text-center mt-8 mb-4">Chatbot</h1>
+        <img src="https://gifdb.com/images/high/old-farmer-holding-a-rake-n7at1u84m7a24gig.gif" alt="Image" class="chat-image">
+        <div class="chat-container">
+            <!-- Chat messages will be appended here -->
+        </div>
+        <div class="flex items-center mt-4">
+            <input type="text" id="question-input" class="chat-input" placeholder="Enter your question">
+            <button onclick="askQuestion()" class="chat-submit">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        function askQuestion() {
+            const question = document.getElementById('question-input').value;
+            document.getElementById('question-input').value = '';
+
+            fetch('/ask', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ question: question })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const answer = data.answer;
+                const chatContainer = document.querySelector('.chat-container');
+                chatContainer.innerHTML += `<p class="my-2"><strong>You:</strong> ${question}</p>`;
+                chatContainer.innerHTML += `<p class="my-2"><strong>Chatbot:</strong> ${answer}</p>`;
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
